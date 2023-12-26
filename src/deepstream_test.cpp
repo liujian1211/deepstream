@@ -132,7 +132,8 @@ int deepstream_func()
              *decoder = NULL, *streammux = NULL, *sink = NULL, 
              *pgie = NULL, *nvvidconv = NULL, *nvosd = NULL,
              *cap_filter = NULL, *cap_filter1 = NULL , *transform = NULL,
-             *nvvidconv1 = NULL,*nvvidconv2 = NULL;
+             *nvvidconv1 = NULL,*nvvidconv2 = NULL,
+             *encoder=NULL , *converter=NULL ,*muxer=NULL;
 
   GstBus *bus = NULL;
   guint bus_watch_id;
@@ -148,6 +149,8 @@ int deepstream_func()
 
   /* Source element for reading from camera */
   source = gst_element_factory_make ("v4l2src", "src_elem");
+
+  h264parser = gst_element_factory_make ("h264parse","parser");
 
   /* capsfilter for v4l2src */
   cap_filter1 = gst_element_factory_make("capsfilter", "src_cap_filter1");
@@ -168,15 +171,22 @@ int deepstream_func()
 
   transform = gst_element_factory_make ("nvegltransform", "nvegl-transform");
 
-  sink = gst_element_factory_make ("nveglglessink", "nvvideo-renderer");
+  // sink = gst_element_factory_make ("nveglglessink", "nvvideo-renderer");
+  sink = gst_element_factory_make ("rtmpsink","sink");
+
+  encoder = gst_element_factory_make ("nvv4l2h264enc", "encoder");
+
+  muxer = gst_element_factory_make ("flvmux","muxer");
+
+  converter = gst_element_factory_make ("nvvideoconvert", "converter");
 
   // Create nvstreammux instance to form batches from one or more sources. 
   streammux = gst_element_factory_make ("nvstreammux", "stream-muxer");
 
 
-  if (!pipeline || !source || !cap_filter1 || !cap_filter 
+  if (!pipeline || !source || !h264parser || !cap_filter1 || !cap_filter 
       || !nvvidconv1 || !nvvidconv2 || !pgie  || !nvvidconv 
-      || !nvosd || !transform || !sink || !streammux )
+      || !nvosd || !transform || !sink || !encoder || !muxer || !converter || !streammux )
   {
     g_printerr ("One or more elements could not be created. Exiting.\n");
     return -1;
@@ -200,6 +210,8 @@ int deepstream_func()
   g_object_set (G_OBJECT (nvvidconv), "nvbuf-memory-type", 0, NULL);
 
   g_object_set (G_OBJECT (nvosd), "gpu-id", 0, NULL);
+
+  g_object_set (G_OBJECT (sink), "location", RTMP_SERVER_URL, NULL);
 
   g_object_set (G_OBJECT (streammux), "batch-size", 1, NULL);
   g_object_set (G_OBJECT (streammux), "width", MUXER_OUTPUT_WIDTH,
@@ -245,10 +257,57 @@ int deepstream_func()
   gst_object_unref (srcpad);
   //********************* sinkpad和srcpad处理 *********************
 
-  gst_bin_add_many (GST_BIN (pipeline),pgie, nvvidconv, nvosd, transform, sink, NULL);
-  if (!gst_element_link_many (streammux, pgie, nvvidconv, nvosd, transform, sink, NULL)) 
+  gst_bin_add_many (GST_BIN (pipeline),pgie, nvvidconv, nvosd, transform, h264parser ,converter,encoder,muxer,sink, NULL);
+  // if (!gst_element_link_many (streammux, pgie, nvvidconv, nvosd, transform, converter,encoder,muxer,sink, NULL)) 
+  // {
+  //   g_printerr ("Elements could not be linked: 2. Exiting.\n");
+  //   return -1;
+  // }
+  if (!gst_element_link(streammux,pgie))
   {
-    g_printerr ("Elements could not be linked: 2. Exiting.\n");
+    g_printerr ("streammux,pgie could not be linked: Exiting.\n");
+    return -1;
+  }
+
+  if (!gst_element_link(pgie,nvvidconv))
+  {
+    g_printerr ("pgie,nvvidconv could not be linked: Exiting.\n");
+    return -1;
+  }
+
+  if (!gst_element_link(nvvidconv,nvosd))
+  {
+    g_printerr ("nvvidconv,nvosd could not be linked: Exiting.\n");
+    return -1;
+  }
+
+  if (!gst_element_link(nvosd,converter))
+  {
+    g_printerr ("nvosd,converter could not be linked: Exiting.\n");
+    return -1;
+  }
+
+  if (!gst_element_link(converter,encoder))
+  {
+    g_printerr ("converter encoder could not be linked: Exiting.\n");
+    return -1;
+  }
+
+  if (!gst_element_link(encoder,h264parser))
+  {
+    g_printerr ("encoder,h264parser could not be linked: Exiting.\n");
+    return -1;
+  }
+
+  if (!gst_element_link(h264parser,muxer))
+  {
+    g_printerr ("h264parser,muxer could not be linked: Exiting.\n");
+    return -1;
+  }
+
+  if (!gst_element_link(muxer,sink))
+  {
+    g_printerr ("muxer,sink could not be linked: Exiting.\n");
     return -1;
   }
 
