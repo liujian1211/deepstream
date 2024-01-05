@@ -57,9 +57,9 @@ link_directories(
 include_directories(${OpenCV_INCLUDE_DIRS})  #OpenCV_INCLUDE_DIRS为固定API，无需使用set自定义
 
 
-set(SRCFILES src/nvdsinfer_yolo_engine.cpp
-			 src/nvdsparsebbox_Yolo.cpp
-			 src/trt_utils.cpp
+set(SRCFILES customparser_yolov5/nvdsinfer_yolo_engine.cpp
+			 customparser_yolov5/nvdsparsebbox_Yolo.cpp
+			 customparser_yolov5/trt_utils.cpp
              # src/yolo.cpp
              # yoloPlugins.cpp
 )

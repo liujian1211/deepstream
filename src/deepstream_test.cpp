@@ -5,7 +5,7 @@
 #define PGIE_CLASS_ID_VEHICLE 0
 #define PGIE_CLASS_ID_PERSON 2
 
-#define LOCAL_VIDEO "/opt/nvidia/deepstream/deepstream-5.0/samples/streams/sample_720p.h264"
+// #define LOCAL_VIDEO "/opt/nvidia/deepstream/deepstream-5.0/samples/streams/sample_720p.h264"
 #define RTMP_SERVER_URL "rtmp://112.82.244.90:1935/live/vehicle_1"
 
 /* The muxer output resolution must be set if the input streams will be of
@@ -19,9 +19,9 @@
 #define MUXER_BATCH_TIMEOUT_USEC 40000
 
 gint frame_number = 0;
-gchar pgie_classes_str[4][32] = { "Vehicle", "TwoWheeler", "Person",
-  "Roadsign"
-};
+// gchar pgie_classes_str[4][32] = { "Vehicle", "TwoWheeler", "Person",
+//   "Roadsign"
+// };
 
 /* osd_sink_pad_buffer_probe  will extract metadata received on OSD sink pad
  * and update params for drawing rectangle, object information etc. */
@@ -41,13 +41,14 @@ osd_sink_pad_buffer_probe (GstPad * pad, GstPadProbeInfo * info,
 
     NvDsBatchMeta *batch_meta = gst_buffer_get_nvds_batch_meta (buf);
 
-    for (l_frame = batch_meta->frame_meta_list; l_frame != NULL;
-      l_frame = l_frame->next) {
+    for (l_frame = batch_meta->frame_meta_list; l_frame != NULL; l_frame = l_frame->next) {
         NvDsFrameMeta *frame_meta = (NvDsFrameMeta *) (l_frame->data);
         int offset = 0;
+
         for (l_obj = frame_meta->obj_meta_list; l_obj != NULL;
                 l_obj = l_obj->next) {
             obj_meta = (NvDsObjectMeta *) (l_obj->data);
+            // std::cout<<"obj_meta的种类为"<<obj_meta->class_id;
             if (obj_meta->class_id == PGIE_CLASS_ID_VEHICLE) {
                 vehicle_count++;
                 num_rects++;
@@ -86,10 +87,10 @@ osd_sink_pad_buffer_probe (GstPad * pad, GstPadProbeInfo * info,
         nvds_add_display_meta_to_frame(frame_meta, display_meta);
     }
 
-    g_print ("Frame Number = %d Number of objects = %d "
-            "Vehicle Count = %d Person Count = %d\n",
-            frame_number, num_rects, vehicle_count, person_count);
-    frame_number++;
+    // g_print ("Frame Number = %d Number of objects = %d "
+    //         "Vehicle Count = %d Person Count = %d\n",
+    //         frame_number, num_rects, vehicle_count, person_count);
+    // frame_number++;
     return GST_PAD_PROBE_OK;
 }
 
@@ -124,7 +125,8 @@ bus_call (GstBus * bus, GstMessage * msg, gpointer data)
 
 //usb推理在本地显示指令：gst-launch-1.0 v4l2src device=/dev/video0 ! 'video/x-raw, format=YUY2, width=1920, height=1080' ! nvvidconv ! 'video/x-raw(memory:NVMM), format=NV12' ! nvoverlaysink
 //上传rtmp指令：gst-launch-1.0 -v v4l2src device=/dev/video0 ! videoconvert ! x264enc ! flvmux ! rtmpsink location="rtmp://server-ip/app/stream-key"
-
+//运行的时候在build路径下的终端输入：PRE_LOAD=../utils/libmyplugins.so ./target
+//使用自己的engine文件主要在于改变dstest1_pgie_config.txt
 int deepstream_func()
 {
   GMainLoop *loop = NULL;
@@ -258,11 +260,7 @@ int deepstream_func()
   //********************* sinkpad和srcpad处理 *********************
 
   gst_bin_add_many (GST_BIN (pipeline),pgie, nvvidconv, nvosd, transform, h264parser ,converter,encoder,muxer,sink, NULL);
-  // if (!gst_element_link_many (streammux, pgie, nvvidconv, nvosd, transform, converter,encoder,muxer,sink, NULL)) 
-  // {
-  //   g_printerr ("Elements could not be linked: 2. Exiting.\n");
-  //   return -1;
-  // }
+
   if (!gst_element_link(streammux,pgie))
   {
     g_printerr ("streammux,pgie could not be linked: Exiting.\n");
