@@ -14,6 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=/usr/lib/cmake/Boost-1.75.0
+
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
@@ -327,14 +330,20 @@ OpenCV_DIR:PATH=/usr/lib/aarch64-linux-gnu/cmake/opencv4
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
-//Dependencies for target
-build/libnvdsinfer_custom_impl_Yolo.so_LIB_DEPENDS:STATIC=
+//The directory containing a CMake configuration file for boost_filesystem.
+boost_filesystem_DIR:PATH=/usr/lib/cmake/boost_filesystem-1.75.0
+
+//The directory containing a CMake configuration file for boost_headers.
+boost_headers_DIR:PATH=/usr/lib/cmake/boost_headers-1.75.0
+
+//The directory containing a CMake configuration file for boost_system.
+boost_system_DIR:PATH=/usr/lib/cmake/boost_system-1.75.0
+
+//Dependencies for the target
+deepsort_LIB_DEPENDS:STATIC=general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_features2d;general;opencv_flann;general;opencv_gapi;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_stitching;general;opencv_video;general;opencv_videoio;general;cudart;general;nvinfer;general;nvonnxparser;
 
 //Dependencies for target
-libnvdsinfer_custom_impl_Yolo.so_LIB_DEPENDS:STATIC=
-
-//Dependencies for target
-libnvdsinfer_custom_impl_Yolo_LIB_DEPENDS:STATIC=
+libnvdsinfer_custom_impl_Yolo_coco_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
 test_websocket_BINARY_DIR:STATIC=/home/nano/liujian/test_websocket/build
@@ -347,6 +356,8 @@ test_websocket_SOURCE_DIR:STATIC=/home/nano/liujian/test_websocket
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
@@ -667,5 +678,11 @@ __pkg_config_arguments_GLIB:INTERNAL=REQUIRED;glib-2.0
 __pkg_config_arguments_GST:INTERNAL=REQUIRED;gstreamer-1.0
 __pkg_config_checked_GLIB:INTERNAL=1
 __pkg_config_checked_GST:INTERNAL=1
+//ADVANCED property for variable: boost_filesystem_DIR
+boost_filesystem_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_headers_DIR
+boost_headers_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_system_DIR
+boost_system_DIR-ADVANCED:INTERNAL=1
 prefix_result:INTERNAL=/usr/lib/aarch64-linux-gnu
 

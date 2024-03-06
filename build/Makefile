@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named libnvdsinfer_custom_impl_Yolo
-
-# Build rule for target.
-libnvdsinfer_custom_impl_Yolo: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 libnvdsinfer_custom_impl_Yolo
-.PHONY : libnvdsinfer_custom_impl_Yolo
-
-# fast build rule for target.
-libnvdsinfer_custom_impl_Yolo/fast:
-	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/build
-.PHONY : libnvdsinfer_custom_impl_Yolo/fast
-
-#=============================================================================
 # Target rules for targets named target
 
 # Build rule for target.
@@ -135,6 +122,113 @@ target: cmake_check_build_system
 target/fast:
 	$(MAKE) -f CMakeFiles/target.dir/build.make CMakeFiles/target.dir/build
 .PHONY : target/fast
+
+#=============================================================================
+# Target rules for targets named libnvdsinfer_custom_impl_Yolo_coco
+
+# Build rule for target.
+libnvdsinfer_custom_impl_Yolo_coco: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 libnvdsinfer_custom_impl_Yolo_coco
+.PHONY : libnvdsinfer_custom_impl_Yolo_coco
+
+# fast build rule for target.
+libnvdsinfer_custom_impl_Yolo_coco/fast:
+	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/build
+.PHONY : libnvdsinfer_custom_impl_Yolo_coco/fast
+
+#=============================================================================
+# Target rules for targets named tcp_ip_message
+
+# Build rule for target.
+tcp_ip_message: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tcp_ip_message
+.PHONY : tcp_ip_message
+
+# fast build rule for target.
+tcp_ip_message/fast:
+	$(MAKE) -f CMakeFiles/tcp_ip_message.dir/build.make CMakeFiles/tcp_ip_message.dir/build
+.PHONY : tcp_ip_message/fast
+
+customparser_yolov5/nvdsinfer_yolo_engine.o: customparser_yolov5/nvdsinfer_yolo_engine.cpp.o
+
+.PHONY : customparser_yolov5/nvdsinfer_yolo_engine.o
+
+# target to build an object file
+customparser_yolov5/nvdsinfer_yolo_engine.cpp.o:
+	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/customparser_yolov5/nvdsinfer_yolo_engine.cpp.o
+.PHONY : customparser_yolov5/nvdsinfer_yolo_engine.cpp.o
+
+customparser_yolov5/nvdsinfer_yolo_engine.i: customparser_yolov5/nvdsinfer_yolo_engine.cpp.i
+
+.PHONY : customparser_yolov5/nvdsinfer_yolo_engine.i
+
+# target to preprocess a source file
+customparser_yolov5/nvdsinfer_yolo_engine.cpp.i:
+	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/customparser_yolov5/nvdsinfer_yolo_engine.cpp.i
+.PHONY : customparser_yolov5/nvdsinfer_yolo_engine.cpp.i
+
+customparser_yolov5/nvdsinfer_yolo_engine.s: customparser_yolov5/nvdsinfer_yolo_engine.cpp.s
+
+.PHONY : customparser_yolov5/nvdsinfer_yolo_engine.s
+
+# target to generate assembly for a file
+customparser_yolov5/nvdsinfer_yolo_engine.cpp.s:
+	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/customparser_yolov5/nvdsinfer_yolo_engine.cpp.s
+.PHONY : customparser_yolov5/nvdsinfer_yolo_engine.cpp.s
+
+customparser_yolov5/nvdsparsebbox_Yolo.o: customparser_yolov5/nvdsparsebbox_Yolo.cpp.o
+
+.PHONY : customparser_yolov5/nvdsparsebbox_Yolo.o
+
+# target to build an object file
+customparser_yolov5/nvdsparsebbox_Yolo.cpp.o:
+	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/customparser_yolov5/nvdsparsebbox_Yolo.cpp.o
+.PHONY : customparser_yolov5/nvdsparsebbox_Yolo.cpp.o
+
+customparser_yolov5/nvdsparsebbox_Yolo.i: customparser_yolov5/nvdsparsebbox_Yolo.cpp.i
+
+.PHONY : customparser_yolov5/nvdsparsebbox_Yolo.i
+
+# target to preprocess a source file
+customparser_yolov5/nvdsparsebbox_Yolo.cpp.i:
+	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/customparser_yolov5/nvdsparsebbox_Yolo.cpp.i
+.PHONY : customparser_yolov5/nvdsparsebbox_Yolo.cpp.i
+
+customparser_yolov5/nvdsparsebbox_Yolo.s: customparser_yolov5/nvdsparsebbox_Yolo.cpp.s
+
+.PHONY : customparser_yolov5/nvdsparsebbox_Yolo.s
+
+# target to generate assembly for a file
+customparser_yolov5/nvdsparsebbox_Yolo.cpp.s:
+	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/customparser_yolov5/nvdsparsebbox_Yolo.cpp.s
+.PHONY : customparser_yolov5/nvdsparsebbox_Yolo.cpp.s
+
+customparser_yolov5/trt_utils.o: customparser_yolov5/trt_utils.cpp.o
+
+.PHONY : customparser_yolov5/trt_utils.o
+
+# target to build an object file
+customparser_yolov5/trt_utils.cpp.o:
+	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/customparser_yolov5/trt_utils.cpp.o
+.PHONY : customparser_yolov5/trt_utils.cpp.o
+
+customparser_yolov5/trt_utils.i: customparser_yolov5/trt_utils.cpp.i
+
+.PHONY : customparser_yolov5/trt_utils.i
+
+# target to preprocess a source file
+customparser_yolov5/trt_utils.cpp.i:
+	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/customparser_yolov5/trt_utils.cpp.i
+.PHONY : customparser_yolov5/trt_utils.cpp.i
+
+customparser_yolov5/trt_utils.s: customparser_yolov5/trt_utils.cpp.s
+
+.PHONY : customparser_yolov5/trt_utils.s
+
+# target to generate assembly for a file
+customparser_yolov5/trt_utils.cpp.s:
+	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/customparser_yolov5/trt_utils.cpp.s
+.PHONY : customparser_yolov5/trt_utils.cpp.s
 
 main.o: main.cpp.o
 
@@ -190,86 +284,86 @@ src/deepstream_test.cpp.s:
 	$(MAKE) -f CMakeFiles/target.dir/build.make CMakeFiles/target.dir/src/deepstream_test.cpp.s
 .PHONY : src/deepstream_test.cpp.s
 
-src/nvdsinfer_yolo_engine.o: src/nvdsinfer_yolo_engine.cpp.o
+src/getGPS.o: src/getGPS.cpp.o
 
-.PHONY : src/nvdsinfer_yolo_engine.o
-
-# target to build an object file
-src/nvdsinfer_yolo_engine.cpp.o:
-	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/src/nvdsinfer_yolo_engine.cpp.o
-.PHONY : src/nvdsinfer_yolo_engine.cpp.o
-
-src/nvdsinfer_yolo_engine.i: src/nvdsinfer_yolo_engine.cpp.i
-
-.PHONY : src/nvdsinfer_yolo_engine.i
-
-# target to preprocess a source file
-src/nvdsinfer_yolo_engine.cpp.i:
-	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/src/nvdsinfer_yolo_engine.cpp.i
-.PHONY : src/nvdsinfer_yolo_engine.cpp.i
-
-src/nvdsinfer_yolo_engine.s: src/nvdsinfer_yolo_engine.cpp.s
-
-.PHONY : src/nvdsinfer_yolo_engine.s
-
-# target to generate assembly for a file
-src/nvdsinfer_yolo_engine.cpp.s:
-	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/src/nvdsinfer_yolo_engine.cpp.s
-.PHONY : src/nvdsinfer_yolo_engine.cpp.s
-
-src/nvdsparsebbox_Yolo.o: src/nvdsparsebbox_Yolo.cpp.o
-
-.PHONY : src/nvdsparsebbox_Yolo.o
+.PHONY : src/getGPS.o
 
 # target to build an object file
-src/nvdsparsebbox_Yolo.cpp.o:
-	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/src/nvdsparsebbox_Yolo.cpp.o
-.PHONY : src/nvdsparsebbox_Yolo.cpp.o
+src/getGPS.cpp.o:
+	$(MAKE) -f CMakeFiles/tcp_ip_message.dir/build.make CMakeFiles/tcp_ip_message.dir/src/getGPS.cpp.o
+.PHONY : src/getGPS.cpp.o
 
-src/nvdsparsebbox_Yolo.i: src/nvdsparsebbox_Yolo.cpp.i
+src/getGPS.i: src/getGPS.cpp.i
 
-.PHONY : src/nvdsparsebbox_Yolo.i
+.PHONY : src/getGPS.i
 
 # target to preprocess a source file
-src/nvdsparsebbox_Yolo.cpp.i:
-	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/src/nvdsparsebbox_Yolo.cpp.i
-.PHONY : src/nvdsparsebbox_Yolo.cpp.i
+src/getGPS.cpp.i:
+	$(MAKE) -f CMakeFiles/tcp_ip_message.dir/build.make CMakeFiles/tcp_ip_message.dir/src/getGPS.cpp.i
+.PHONY : src/getGPS.cpp.i
 
-src/nvdsparsebbox_Yolo.s: src/nvdsparsebbox_Yolo.cpp.s
+src/getGPS.s: src/getGPS.cpp.s
 
-.PHONY : src/nvdsparsebbox_Yolo.s
+.PHONY : src/getGPS.s
 
 # target to generate assembly for a file
-src/nvdsparsebbox_Yolo.cpp.s:
-	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/src/nvdsparsebbox_Yolo.cpp.s
-.PHONY : src/nvdsparsebbox_Yolo.cpp.s
+src/getGPS.cpp.s:
+	$(MAKE) -f CMakeFiles/tcp_ip_message.dir/build.make CMakeFiles/tcp_ip_message.dir/src/getGPS.cpp.s
+.PHONY : src/getGPS.cpp.s
 
-src/trt_utils.o: src/trt_utils.cpp.o
+src/messageGenerate.o: src/messageGenerate.cpp.o
 
-.PHONY : src/trt_utils.o
+.PHONY : src/messageGenerate.o
 
 # target to build an object file
-src/trt_utils.cpp.o:
-	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/src/trt_utils.cpp.o
-.PHONY : src/trt_utils.cpp.o
+src/messageGenerate.cpp.o:
+	$(MAKE) -f CMakeFiles/tcp_ip_message.dir/build.make CMakeFiles/tcp_ip_message.dir/src/messageGenerate.cpp.o
+.PHONY : src/messageGenerate.cpp.o
 
-src/trt_utils.i: src/trt_utils.cpp.i
+src/messageGenerate.i: src/messageGenerate.cpp.i
 
-.PHONY : src/trt_utils.i
+.PHONY : src/messageGenerate.i
 
 # target to preprocess a source file
-src/trt_utils.cpp.i:
-	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/src/trt_utils.cpp.i
-.PHONY : src/trt_utils.cpp.i
+src/messageGenerate.cpp.i:
+	$(MAKE) -f CMakeFiles/tcp_ip_message.dir/build.make CMakeFiles/tcp_ip_message.dir/src/messageGenerate.cpp.i
+.PHONY : src/messageGenerate.cpp.i
 
-src/trt_utils.s: src/trt_utils.cpp.s
+src/messageGenerate.s: src/messageGenerate.cpp.s
 
-.PHONY : src/trt_utils.s
+.PHONY : src/messageGenerate.s
 
 # target to generate assembly for a file
-src/trt_utils.cpp.s:
-	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/src/trt_utils.cpp.s
-.PHONY : src/trt_utils.cpp.s
+src/messageGenerate.cpp.s:
+	$(MAKE) -f CMakeFiles/tcp_ip_message.dir/build.make CMakeFiles/tcp_ip_message.dir/src/messageGenerate.cpp.s
+.PHONY : src/messageGenerate.cpp.s
+
+src/tcp_ip_message.o: src/tcp_ip_message.cpp.o
+
+.PHONY : src/tcp_ip_message.o
+
+# target to build an object file
+src/tcp_ip_message.cpp.o:
+	$(MAKE) -f CMakeFiles/tcp_ip_message.dir/build.make CMakeFiles/tcp_ip_message.dir/src/tcp_ip_message.cpp.o
+.PHONY : src/tcp_ip_message.cpp.o
+
+src/tcp_ip_message.i: src/tcp_ip_message.cpp.i
+
+.PHONY : src/tcp_ip_message.i
+
+# target to preprocess a source file
+src/tcp_ip_message.cpp.i:
+	$(MAKE) -f CMakeFiles/tcp_ip_message.dir/build.make CMakeFiles/tcp_ip_message.dir/src/tcp_ip_message.cpp.i
+.PHONY : src/tcp_ip_message.cpp.i
+
+src/tcp_ip_message.s: src/tcp_ip_message.cpp.s
+
+.PHONY : src/tcp_ip_message.s
+
+# target to generate assembly for a file
+src/tcp_ip_message.cpp.s:
+	$(MAKE) -f CMakeFiles/tcp_ip_message.dir/build.make CMakeFiles/tcp_ip_message.dir/src/tcp_ip_message.cpp.s
+.PHONY : src/tcp_ip_message.cpp.s
 
 # Help Target
 help:
@@ -278,24 +372,34 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... libnvdsinfer_custom_impl_Yolo"
 	@echo "... edit_cache"
 	@echo "... target"
+	@echo "... libnvdsinfer_custom_impl_Yolo_coco"
+	@echo "... tcp_ip_message"
+	@echo "... customparser_yolov5/nvdsinfer_yolo_engine.o"
+	@echo "... customparser_yolov5/nvdsinfer_yolo_engine.i"
+	@echo "... customparser_yolov5/nvdsinfer_yolo_engine.s"
+	@echo "... customparser_yolov5/nvdsparsebbox_Yolo.o"
+	@echo "... customparser_yolov5/nvdsparsebbox_Yolo.i"
+	@echo "... customparser_yolov5/nvdsparsebbox_Yolo.s"
+	@echo "... customparser_yolov5/trt_utils.o"
+	@echo "... customparser_yolov5/trt_utils.i"
+	@echo "... customparser_yolov5/trt_utils.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... src/deepstream_test.o"
 	@echo "... src/deepstream_test.i"
 	@echo "... src/deepstream_test.s"
-	@echo "... src/nvdsinfer_yolo_engine.o"
-	@echo "... src/nvdsinfer_yolo_engine.i"
-	@echo "... src/nvdsinfer_yolo_engine.s"
-	@echo "... src/nvdsparsebbox_Yolo.o"
-	@echo "... src/nvdsparsebbox_Yolo.i"
-	@echo "... src/nvdsparsebbox_Yolo.s"
-	@echo "... src/trt_utils.o"
-	@echo "... src/trt_utils.i"
-	@echo "... src/trt_utils.s"
+	@echo "... src/getGPS.o"
+	@echo "... src/getGPS.i"
+	@echo "... src/getGPS.s"
+	@echo "... src/messageGenerate.o"
+	@echo "... src/messageGenerate.i"
+	@echo "... src/messageGenerate.s"
+	@echo "... src/tcp_ip_message.o"
+	@echo "... src/tcp_ip_message.i"
+	@echo "... src/tcp_ip_message.s"
 .PHONY : help
 
 

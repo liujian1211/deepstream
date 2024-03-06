@@ -55,6 +55,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/DependInfo.cmake"
   "CMakeFiles/target.dir/DependInfo.cmake"
+  "CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/DependInfo.cmake"
+  "CMakeFiles/tcp_ip_message.dir/DependInfo.cmake"
   )

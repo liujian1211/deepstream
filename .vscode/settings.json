@@ -54,7 +54,23 @@
         "streambuf": "cpp",
         "cinttypes": "cpp",
         "typeinfo": "cpp",
-        "__locale": "cpp"
+        "__locale": "cpp",
+        "bitset": "cpp",
+        "codecvt": "cpp",
+        "forward_list": "cpp",
+        "unordered_set": "cpp",
+        "filesystem": "cpp",
+        "typeindex": "cpp",
+        "__nullptr": "cpp",
+        "__config": "cpp",
+        "__split_buffer": "cpp",
+        "regex": "cpp",
+        "variant": "cpp",
+        "__hash_table": "cpp",
+        "__tree": "cpp",
+        "queue": "cpp",
+        "stack": "cpp"
     },
-    "cmake.options.statusBarVisibility": "visible"
+    "cmake.options.statusBarVisibility": "visible",
+    "C_Cpp.errorSquiggles": "enabled"
 }

@@ -60,47 +60,10 @@ CMAKE_SOURCE_DIR = /home/nano/liujian/test_websocket
 CMAKE_BINARY_DIR = /home/nano/liujian/test_websocket/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir
-
-# All Build rule for target.
-CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/all:
-	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/depend
-	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nano/liujian/test_websocket/build/CMakeFiles --progress-num=1,2,3,4 "Built target libnvdsinfer_custom_impl_Yolo"
-.PHONY : CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/all
-
-# Include target in all.
-all: CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nano/liujian/test_websocket/build/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nano/liujian/test_websocket/build/CMakeFiles 0
-.PHONY : CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/rule
-
-# Convenience name for target.
-libnvdsinfer_custom_impl_Yolo: CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/rule
-
-.PHONY : libnvdsinfer_custom_impl_Yolo
-
-# clean rule for target.
-CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/clean:
-	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/clean
-.PHONY : CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/target.dir
 
 # All Build rule for target.
-CMakeFiles/target.dir/all: CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/all
+CMakeFiles/target.dir/all: CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/all
 	$(MAKE) -f CMakeFiles/target.dir/build.make CMakeFiles/target.dir/depend
 	$(MAKE) -f CMakeFiles/target.dir/build.make CMakeFiles/target.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nano/liujian/test_websocket/build/CMakeFiles --progress-num=5,6,7 "Built target target"
@@ -130,6 +93,80 @@ CMakeFiles/target.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/target.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir
+
+# All Build rule for target.
+CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/all:
+	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/depend
+	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nano/liujian/test_websocket/build/CMakeFiles --progress-num=1,2,3,4 "Built target libnvdsinfer_custom_impl_Yolo_coco"
+.PHONY : CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/all
+
+# Include target in all.
+all: CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nano/liujian/test_websocket/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nano/liujian/test_websocket/build/CMakeFiles 0
+.PHONY : CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/rule
+
+# Convenience name for target.
+libnvdsinfer_custom_impl_Yolo_coco: CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/rule
+
+.PHONY : libnvdsinfer_custom_impl_Yolo_coco
+
+# clean rule for target.
+CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/clean:
+	$(MAKE) -f CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/build.make CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/clean
+.PHONY : CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/tcp_ip_message.dir
+
+# All Build rule for target.
+CMakeFiles/tcp_ip_message.dir/all:
+	$(MAKE) -f CMakeFiles/tcp_ip_message.dir/build.make CMakeFiles/tcp_ip_message.dir/depend
+	$(MAKE) -f CMakeFiles/tcp_ip_message.dir/build.make CMakeFiles/tcp_ip_message.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nano/liujian/test_websocket/build/CMakeFiles --progress-num=8,9,10,11 "Built target tcp_ip_message"
+.PHONY : CMakeFiles/tcp_ip_message.dir/all
+
+# Include target in all.
+all: CMakeFiles/tcp_ip_message.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/tcp_ip_message.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nano/liujian/test_websocket/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tcp_ip_message.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nano/liujian/test_websocket/build/CMakeFiles 0
+.PHONY : CMakeFiles/tcp_ip_message.dir/rule
+
+# Convenience name for target.
+tcp_ip_message: CMakeFiles/tcp_ip_message.dir/rule
+
+.PHONY : tcp_ip_message
+
+# clean rule for target.
+CMakeFiles/tcp_ip_message.dir/clean:
+	$(MAKE) -f CMakeFiles/tcp_ip_message.dir/build.make CMakeFiles/tcp_ip_message.dir/clean
+.PHONY : CMakeFiles/tcp_ip_message.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/tcp_ip_message.dir/clean
 
 .PHONY : clean
 

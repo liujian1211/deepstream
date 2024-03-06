@@ -28,28 +28,28 @@ The CXX compiler identification is GNU, found in "/home/nano/liujian/test_websoc
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0ccb0/fast"
-/usr/bin/make -f CMakeFiles/cmTC_0ccb0.dir/build.make CMakeFiles/cmTC_0ccb0.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_6209c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6209c.dir/build.make CMakeFiles/cmTC_6209c.dir/build
 make[1]: Entering directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0ccb0.dir/testCCompiler.c.o
-/usr/bin/aarch64-linux-gnu-gcc    -o CMakeFiles/cmTC_0ccb0.dir/testCCompiler.c.o   -c /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_0ccb0
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ccb0.dir/link.txt --verbose=1
-/usr/bin/aarch64-linux-gnu-gcc      -rdynamic CMakeFiles/cmTC_0ccb0.dir/testCCompiler.c.o  -o cmTC_0ccb0 
+Building C object CMakeFiles/cmTC_6209c.dir/testCCompiler.c.o
+/usr/bin/aarch64-linux-gnu-gcc    -o CMakeFiles/cmTC_6209c.dir/testCCompiler.c.o   -c /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_6209c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6209c.dir/link.txt --verbose=1
+/usr/bin/aarch64-linux-gnu-gcc      -rdynamic CMakeFiles/cmTC_6209c.dir/testCCompiler.c.o  -o cmTC_6209c 
 make[1]: Leaving directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_93ac5/fast"
-/usr/bin/make -f CMakeFiles/cmTC_93ac5.dir/build.make CMakeFiles/cmTC_93ac5.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_7b7db/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7b7db.dir/build.make CMakeFiles/cmTC_7b7db.dir/build
 make[1]: Entering directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_93ac5.dir/CMakeCCompilerABI.c.o
-/usr/bin/aarch64-linux-gnu-gcc    -o CMakeFiles/cmTC_93ac5.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_93ac5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93ac5.dir/link.txt --verbose=1
-/usr/bin/aarch64-linux-gnu-gcc     -v -rdynamic CMakeFiles/cmTC_93ac5.dir/CMakeCCompilerABI.c.o  -o cmTC_93ac5 
+Building C object CMakeFiles/cmTC_7b7db.dir/CMakeCCompilerABI.c.o
+/usr/bin/aarch64-linux-gnu-gcc    -o CMakeFiles/cmTC_7b7db.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_7b7db
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7b7db.dir/link.txt --verbose=1
+/usr/bin/aarch64-linux-gnu-gcc     -v -rdynamic CMakeFiles/cmTC_7b7db.dir/CMakeCCompilerABI.c.o  -o cmTC_7b7db 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/aarch64-linux-gnu-gcc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/7/lto-wrapper
@@ -59,9 +59,9 @@ Thread model: posix
 gcc version 7.5.0 (Ubuntu/Linaro 7.5.0-3ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/7/:/usr/lib/gcc/aarch64-linux-gnu/7/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/7/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/7/:/usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/7/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_93ac5' '-mlittle-endian' '-mabi=lp64'
- /usr/lib/gcc/aarch64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccRWMsA2.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -z now -z relro -o cmTC_93ac5 /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/7 -L/usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/7/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/7/../../.. CMakeFiles/cmTC_93ac5.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/aarch64-linux-gnu/7/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_93ac5' '-mlittle-endian' '-mabi=lp64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_7b7db' '-mlittle-endian' '-mabi=lp64'
+ /usr/lib/gcc/aarch64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccnelLZb.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -z now -z relro -o cmTC_7b7db /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/7 -L/usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/7/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/7/../../.. CMakeFiles/cmTC_7b7db.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/aarch64-linux-gnu/7/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_7b7db' '-mlittle-endian' '-mabi=lp64'
 make[1]: Leaving directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
 
 
@@ -69,14 +69,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_93ac5/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_93ac5.dir/build.make CMakeFiles/cmTC_93ac5.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_7b7db/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_7b7db.dir/build.make CMakeFiles/cmTC_7b7db.dir/build]
   ignore line: [make[1]: Entering directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_93ac5.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/aarch64-linux-gnu-gcc    -o CMakeFiles/cmTC_93ac5.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_93ac5]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93ac5.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/aarch64-linux-gnu-gcc     -v -rdynamic CMakeFiles/cmTC_93ac5.dir/CMakeCCompilerABI.c.o  -o cmTC_93ac5 ]
+  ignore line: [Building C object CMakeFiles/cmTC_7b7db.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/aarch64-linux-gnu-gcc    -o CMakeFiles/cmTC_7b7db.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_7b7db]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7b7db.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/aarch64-linux-gnu-gcc     -v -rdynamic CMakeFiles/cmTC_7b7db.dir/CMakeCCompilerABI.c.o  -o cmTC_7b7db ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/aarch64-linux-gnu-gcc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/7/lto-wrapper]
@@ -86,13 +86,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.5.0 (Ubuntu/Linaro 7.5.0-3ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/7/:/usr/lib/gcc/aarch64-linux-gnu/7/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/7/:/usr/lib/gcc/aarch64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/7/:/usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/7/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_93ac5' '-mlittle-endian' '-mabi=lp64']
-  link line: [ /usr/lib/gcc/aarch64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccRWMsA2.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -z now -z relro -o cmTC_93ac5 /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/7 -L/usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/7/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/7/../../.. CMakeFiles/cmTC_93ac5.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/aarch64-linux-gnu/7/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_7b7db' '-mlittle-endian' '-mabi=lp64']
+  link line: [ /usr/lib/gcc/aarch64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccnelLZb.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -z now -z relro -o cmTC_7b7db /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/7 -L/usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/7/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/7/../../.. CMakeFiles/cmTC_7b7db.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/aarch64-linux-gnu/7/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/aarch64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccRWMsA2.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccnelLZb.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -113,7 +113,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_93ac5] ==> ignore
+    arg [cmTC_7b7db] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -125,7 +125,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/aarch64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_93ac5.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_7b7db.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -157,14 +157,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c4507/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c4507.dir/build.make CMakeFiles/cmTC_c4507.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_9d2f3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9d2f3.dir/build.make CMakeFiles/cmTC_9d2f3.dir/build
 make[1]: Entering directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c4507.dir/feature_tests.c.o
-/usr/bin/aarch64-linux-gnu-gcc   -std=c11 -o CMakeFiles/cmTC_c4507.dir/feature_tests.c.o   -c /home/nano/liujian/test_websocket/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_c4507
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4507.dir/link.txt --verbose=1
-/usr/bin/aarch64-linux-gnu-gcc      -rdynamic CMakeFiles/cmTC_c4507.dir/feature_tests.c.o  -o cmTC_c4507 
+Building C object CMakeFiles/cmTC_9d2f3.dir/feature_tests.c.o
+/usr/bin/aarch64-linux-gnu-gcc   -std=c11 -o CMakeFiles/cmTC_9d2f3.dir/feature_tests.c.o   -c /home/nano/liujian/test_websocket/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_9d2f3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d2f3.dir/link.txt --verbose=1
+/usr/bin/aarch64-linux-gnu-gcc      -rdynamic CMakeFiles/cmTC_9d2f3.dir/feature_tests.c.o  -o cmTC_9d2f3 
 make[1]: Leaving directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
 
 
@@ -177,14 +177,14 @@ make[1]: Leaving directory '/home/nano/liujian/test_websocket/build/CMakeFiles/C
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d4548/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d4548.dir/build.make CMakeFiles/cmTC_d4548.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_96fbb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_96fbb.dir/build.make CMakeFiles/cmTC_96fbb.dir/build
 make[1]: Entering directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d4548.dir/feature_tests.c.o
-/usr/bin/aarch64-linux-gnu-gcc   -std=c99 -o CMakeFiles/cmTC_d4548.dir/feature_tests.c.o   -c /home/nano/liujian/test_websocket/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_d4548
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4548.dir/link.txt --verbose=1
-/usr/bin/aarch64-linux-gnu-gcc      -rdynamic CMakeFiles/cmTC_d4548.dir/feature_tests.c.o  -o cmTC_d4548 
+Building C object CMakeFiles/cmTC_96fbb.dir/feature_tests.c.o
+/usr/bin/aarch64-linux-gnu-gcc   -std=c99 -o CMakeFiles/cmTC_96fbb.dir/feature_tests.c.o   -c /home/nano/liujian/test_websocket/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_96fbb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96fbb.dir/link.txt --verbose=1
+/usr/bin/aarch64-linux-gnu-gcc      -rdynamic CMakeFiles/cmTC_96fbb.dir/feature_tests.c.o  -o cmTC_96fbb 
 make[1]: Leaving directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
 
 
@@ -197,14 +197,14 @@ make[1]: Leaving directory '/home/nano/liujian/test_websocket/build/CMakeFiles/C
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ae819/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ae819.dir/build.make CMakeFiles/cmTC_ae819.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_4707d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4707d.dir/build.make CMakeFiles/cmTC_4707d.dir/build
 make[1]: Entering directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ae819.dir/feature_tests.c.o
-/usr/bin/aarch64-linux-gnu-gcc   -std=c90 -o CMakeFiles/cmTC_ae819.dir/feature_tests.c.o   -c /home/nano/liujian/test_websocket/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_ae819
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ae819.dir/link.txt --verbose=1
-/usr/bin/aarch64-linux-gnu-gcc      -rdynamic CMakeFiles/cmTC_ae819.dir/feature_tests.c.o  -o cmTC_ae819 
+Building C object CMakeFiles/cmTC_4707d.dir/feature_tests.c.o
+/usr/bin/aarch64-linux-gnu-gcc   -std=c90 -o CMakeFiles/cmTC_4707d.dir/feature_tests.c.o   -c /home/nano/liujian/test_websocket/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_4707d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4707d.dir/link.txt --verbose=1
+/usr/bin/aarch64-linux-gnu-gcc      -rdynamic CMakeFiles/cmTC_4707d.dir/feature_tests.c.o  -o cmTC_4707d 
 make[1]: Leaving directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
 
 
@@ -215,28 +215,28 @@ make[1]: Leaving directory '/home/nano/liujian/test_websocket/build/CMakeFiles/C
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f1a10/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f1a10.dir/build.make CMakeFiles/cmTC_f1a10.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_25e0b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_25e0b.dir/build.make CMakeFiles/cmTC_25e0b.dir/build
 make[1]: Entering directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f1a10.dir/testCXXCompiler.cxx.o
-/usr/bin/aarch64-linux-gnu-g++     -o CMakeFiles/cmTC_f1a10.dir/testCXXCompiler.cxx.o -c /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_f1a10
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1a10.dir/link.txt --verbose=1
-/usr/bin/aarch64-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_f1a10.dir/testCXXCompiler.cxx.o  -o cmTC_f1a10 
+Building CXX object CMakeFiles/cmTC_25e0b.dir/testCXXCompiler.cxx.o
+/usr/bin/aarch64-linux-gnu-g++     -o CMakeFiles/cmTC_25e0b.dir/testCXXCompiler.cxx.o -c /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_25e0b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_25e0b.dir/link.txt --verbose=1
+/usr/bin/aarch64-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_25e0b.dir/testCXXCompiler.cxx.o  -o cmTC_25e0b 
 make[1]: Leaving directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d2541/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d2541.dir/build.make CMakeFiles/cmTC_d2541.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_a67a2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a67a2.dir/build.make CMakeFiles/cmTC_a67a2.dir/build
 make[1]: Entering directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d2541.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/aarch64-linux-gnu-g++     -o CMakeFiles/cmTC_d2541.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_d2541
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2541.dir/link.txt --verbose=1
-/usr/bin/aarch64-linux-gnu-g++      -v -rdynamic CMakeFiles/cmTC_d2541.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_d2541 
+Building CXX object CMakeFiles/cmTC_a67a2.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/aarch64-linux-gnu-g++     -o CMakeFiles/cmTC_a67a2.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_a67a2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a67a2.dir/link.txt --verbose=1
+/usr/bin/aarch64-linux-gnu-g++      -v -rdynamic CMakeFiles/cmTC_a67a2.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_a67a2 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/aarch64-linux-gnu-g++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/7/lto-wrapper
@@ -246,9 +246,9 @@ Thread model: posix
 gcc version 7.5.0 (Ubuntu/Linaro 7.5.0-3ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/7/:/usr/lib/gcc/aarch64-linux-gnu/7/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/7/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/7/:/usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/7/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d2541' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
- /usr/lib/gcc/aarch64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbHfA1f.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -z now -z relro -o cmTC_d2541 /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/7 -L/usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/7/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/7/../../.. CMakeFiles/cmTC_d2541.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/7/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d2541' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a67a2' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+ /usr/lib/gcc/aarch64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc9qfnzw.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -z now -z relro -o cmTC_a67a2 /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/7 -L/usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/7/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/7/../../.. CMakeFiles/cmTC_a67a2.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/7/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a67a2' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
 make[1]: Leaving directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
 
 
@@ -256,14 +256,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_d2541/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_d2541.dir/build.make CMakeFiles/cmTC_d2541.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_a67a2/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_a67a2.dir/build.make CMakeFiles/cmTC_a67a2.dir/build]
   ignore line: [make[1]: Entering directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_d2541.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/aarch64-linux-gnu-g++     -o CMakeFiles/cmTC_d2541.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_d2541]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2541.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/aarch64-linux-gnu-g++      -v -rdynamic CMakeFiles/cmTC_d2541.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_d2541 ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_a67a2.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/aarch64-linux-gnu-g++     -o CMakeFiles/cmTC_a67a2.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_a67a2]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a67a2.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/aarch64-linux-gnu-g++      -v -rdynamic CMakeFiles/cmTC_a67a2.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_a67a2 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/aarch64-linux-gnu-g++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/7/lto-wrapper]
@@ -273,13 +273,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.5.0 (Ubuntu/Linaro 7.5.0-3ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/7/:/usr/lib/gcc/aarch64-linux-gnu/7/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/7/:/usr/lib/gcc/aarch64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/7/:/usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/7/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d2541' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
-  link line: [ /usr/lib/gcc/aarch64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbHfA1f.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -z now -z relro -o cmTC_d2541 /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/7 -L/usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/7/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/7/../../.. CMakeFiles/cmTC_d2541.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/7/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a67a2' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
+  link line: [ /usr/lib/gcc/aarch64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc9qfnzw.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -z now -z relro -o cmTC_a67a2 /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/7 -L/usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/7/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/7/../../.. CMakeFiles/cmTC_a67a2.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/7/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/aarch64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccbHfA1f.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc9qfnzw.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -300,7 +300,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_d2541] ==> ignore
+    arg [cmTC_a67a2] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -312,7 +312,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/aarch64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_d2541.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_a67a2.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -340,14 +340,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ed8c0/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ed8c0.dir/build.make CMakeFiles/cmTC_ed8c0.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_1d30f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1d30f.dir/build.make CMakeFiles/cmTC_1d30f.dir/build
 make[1]: Entering directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_ed8c0.dir/feature_tests.cxx.o
-/usr/bin/aarch64-linux-gnu-g++    -std=c++1z -o CMakeFiles/cmTC_ed8c0.dir/feature_tests.cxx.o -c /home/nano/liujian/test_websocket/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_ed8c0
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed8c0.dir/link.txt --verbose=1
-/usr/bin/aarch64-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_ed8c0.dir/feature_tests.cxx.o  -o cmTC_ed8c0 
+Building CXX object CMakeFiles/cmTC_1d30f.dir/feature_tests.cxx.o
+/usr/bin/aarch64-linux-gnu-g++    -std=c++1z -o CMakeFiles/cmTC_1d30f.dir/feature_tests.cxx.o -c /home/nano/liujian/test_websocket/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_1d30f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d30f.dir/link.txt --verbose=1
+/usr/bin/aarch64-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_1d30f.dir/feature_tests.cxx.o  -o cmTC_1d30f 
 make[1]: Leaving directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
 
 
@@ -413,14 +413,14 @@ make[1]: Leaving directory '/home/nano/liujian/test_websocket/build/CMakeFiles/C
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_cbad8/fast"
-/usr/bin/make -f CMakeFiles/cmTC_cbad8.dir/build.make CMakeFiles/cmTC_cbad8.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_99289/fast"
+/usr/bin/make -f CMakeFiles/cmTC_99289.dir/build.make CMakeFiles/cmTC_99289.dir/build
 make[1]: Entering directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_cbad8.dir/feature_tests.cxx.o
-/usr/bin/aarch64-linux-gnu-g++    -std=c++14 -o CMakeFiles/cmTC_cbad8.dir/feature_tests.cxx.o -c /home/nano/liujian/test_websocket/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_cbad8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cbad8.dir/link.txt --verbose=1
-/usr/bin/aarch64-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_cbad8.dir/feature_tests.cxx.o  -o cmTC_cbad8 
+Building CXX object CMakeFiles/cmTC_99289.dir/feature_tests.cxx.o
+/usr/bin/aarch64-linux-gnu-g++    -std=c++14 -o CMakeFiles/cmTC_99289.dir/feature_tests.cxx.o -c /home/nano/liujian/test_websocket/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_99289
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99289.dir/link.txt --verbose=1
+/usr/bin/aarch64-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_99289.dir/feature_tests.cxx.o  -o cmTC_99289 
 make[1]: Leaving directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
 
 
@@ -486,14 +486,14 @@ make[1]: Leaving directory '/home/nano/liujian/test_websocket/build/CMakeFiles/C
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_aadba/fast"
-/usr/bin/make -f CMakeFiles/cmTC_aadba.dir/build.make CMakeFiles/cmTC_aadba.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_e3fc3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e3fc3.dir/build.make CMakeFiles/cmTC_e3fc3.dir/build
 make[1]: Entering directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_aadba.dir/feature_tests.cxx.o
-/usr/bin/aarch64-linux-gnu-g++    -std=c++11 -o CMakeFiles/cmTC_aadba.dir/feature_tests.cxx.o -c /home/nano/liujian/test_websocket/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_aadba
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aadba.dir/link.txt --verbose=1
-/usr/bin/aarch64-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_aadba.dir/feature_tests.cxx.o  -o cmTC_aadba 
+Building CXX object CMakeFiles/cmTC_e3fc3.dir/feature_tests.cxx.o
+/usr/bin/aarch64-linux-gnu-g++    -std=c++11 -o CMakeFiles/cmTC_e3fc3.dir/feature_tests.cxx.o -c /home/nano/liujian/test_websocket/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_e3fc3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3fc3.dir/link.txt --verbose=1
+/usr/bin/aarch64-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_e3fc3.dir/feature_tests.cxx.o  -o cmTC_e3fc3 
 make[1]: Leaving directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
 
 
@@ -559,14 +559,14 @@ make[1]: Leaving directory '/home/nano/liujian/test_websocket/build/CMakeFiles/C
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_863aa/fast"
-/usr/bin/make -f CMakeFiles/cmTC_863aa.dir/build.make CMakeFiles/cmTC_863aa.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b70bd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b70bd.dir/build.make CMakeFiles/cmTC_b70bd.dir/build
 make[1]: Entering directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_863aa.dir/feature_tests.cxx.o
-/usr/bin/aarch64-linux-gnu-g++    -std=c++98 -o CMakeFiles/cmTC_863aa.dir/feature_tests.cxx.o -c /home/nano/liujian/test_websocket/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_863aa
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_863aa.dir/link.txt --verbose=1
-/usr/bin/aarch64-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_863aa.dir/feature_tests.cxx.o  -o cmTC_863aa 
+Building CXX object CMakeFiles/cmTC_b70bd.dir/feature_tests.cxx.o
+/usr/bin/aarch64-linux-gnu-g++    -std=c++98 -o CMakeFiles/cmTC_b70bd.dir/feature_tests.cxx.o -c /home/nano/liujian/test_websocket/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_b70bd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b70bd.dir/link.txt --verbose=1
+/usr/bin/aarch64-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_b70bd.dir/feature_tests.cxx.o  -o cmTC_b70bd 
 make[1]: Leaving directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
 
 
@@ -630,28 +630,28 @@ make[1]: Leaving directory '/home/nano/liujian/test_websocket/build/CMakeFiles/C
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_684a9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_684a9.dir/build.make CMakeFiles/cmTC_684a9.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b93f9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b93f9.dir/build.make CMakeFiles/cmTC_b93f9.dir/build
 make[1]: Entering directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_684a9.dir/CheckIncludeFile.c.o
-/usr/bin/aarch64-linux-gnu-gcc   -fPIC    -o CMakeFiles/cmTC_684a9.dir/CheckIncludeFile.c.o   -c /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_684a9
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_684a9.dir/link.txt --verbose=1
-/usr/bin/aarch64-linux-gnu-gcc -fPIC     -rdynamic CMakeFiles/cmTC_684a9.dir/CheckIncludeFile.c.o  -o cmTC_684a9 
+Building C object CMakeFiles/cmTC_b93f9.dir/CheckIncludeFile.c.o
+/usr/bin/aarch64-linux-gnu-gcc   -fPIC    -o CMakeFiles/cmTC_b93f9.dir/CheckIncludeFile.c.o   -c /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_b93f9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b93f9.dir/link.txt --verbose=1
+/usr/bin/aarch64-linux-gnu-gcc -fPIC     -rdynamic CMakeFiles/cmTC_b93f9.dir/CheckIncludeFile.c.o  -o cmTC_b93f9 
 make[1]: Leaving directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
 Change Dir: /home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1050f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1050f.dir/build.make CMakeFiles/cmTC_1050f.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_2c625/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2c625.dir/build.make CMakeFiles/cmTC_2c625.dir/build
 make[1]: Entering directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1050f.dir/CheckFunctionExists.c.o
-/usr/bin/aarch64-linux-gnu-gcc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_1050f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_1050f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1050f.dir/link.txt --verbose=1
-/usr/bin/aarch64-linux-gnu-gcc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_1050f.dir/CheckFunctionExists.c.o  -o cmTC_1050f -lpthread 
+Building C object CMakeFiles/cmTC_2c625.dir/CheckFunctionExists.c.o
+/usr/bin/aarch64-linux-gnu-gcc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_2c625.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2c625
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2c625.dir/link.txt --verbose=1
+/usr/bin/aarch64-linux-gnu-gcc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_2c625.dir/CheckFunctionExists.c.o  -o cmTC_2c625 -lpthread 
 make[1]: Leaving directory '/home/nano/liujian/test_websocket/build/CMakeFiles/CMakeTmp'
 
 

@@ -15,6 +15,10 @@ stdio.h
 -
 gstnvdsmeta.h
 .././include/gstnvdsmeta.h
+vector
+-
+opencv2/opencv.hpp
+-
 
 .././include/gstnvdsmeta.h
 gst/gst.h
@@ -27,6 +31,22 @@ nvdsmeta.h
 .././include/nvdsmeta.h
 nvds_latency_meta.h
 .././include/nvds_latency_meta.h
+
+.././include/messageGenerate.h
+iostream
+-
+string
+-
+bitset
+-
+vector
+-
+ctime
+-
+sstream
+-
+iomanip
+-
 
 .././include/nvds_latency_meta.h
 glib.h
@@ -69,6 +89,18 @@ deepstream_test.h
 /home/nano/liujian/test_websocket/src/deepstream_test.h
 iostream
 -
+fstream
+-
+map
+-
+glib.h
+-
+string
+-
+ctime
+-
+messageGenerate.h
+/home/nano/liujian/test_websocket/src/messageGenerate.h
 
 /usr/include/glib-2.0/glib-object.h
 gobject/gbinding.h

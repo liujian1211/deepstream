@@ -28,7 +28,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/nano/liujian/test_websocket/build/CMakeFiles/libnvdsinfer_custom_impl_Yolo.dir/DependInfo.cmake"
+  "/home/nano/liujian/test_websocket/build/CMakeFiles/libnvdsinfer_custom_impl_Yolo_coco.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

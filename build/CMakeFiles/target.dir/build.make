@@ -125,7 +125,7 @@ target: /usr/lib/aarch64-linux-gnu/libopencv_photo.so.4.1.1
 target: /usr/lib/aarch64-linux-gnu/libopencv_stitching.so.4.1.1
 target: /usr/lib/aarch64-linux-gnu/libopencv_video.so.4.1.1
 target: /usr/lib/aarch64-linux-gnu/libopencv_videoio.so.4.1.1
-target: liblibnvdsinfer_custom_impl_Yolo.so
+target: liblibnvdsinfer_custom_impl_Yolo_coco.so
 target: /usr/local/cuda-10.2/lib64/libcudart_static.a
 target: /usr/lib/aarch64-linux-gnu/librt.so
 target: /usr/lib/aarch64-linux-gnu/libopencv_imgcodecs.so.4.1.1
