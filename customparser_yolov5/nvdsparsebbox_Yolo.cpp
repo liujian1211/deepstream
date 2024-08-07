@@ -30,7 +30,11 @@
 #include "nvdsinfer_custom_impl.h"
 #include "trt_utils.h"
 
+<<<<<<< HEAD
 static const int NUM_CLASSES_YOLO = 19;
+=======
+static const int NUM_CLASSES_YOLO = 80;
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
 #define NMS_THRESH 0.5
 #define CONF_THRESH 0.4
 #define BATCH_SIZE 1
@@ -142,7 +146,11 @@ static bool NvDsInferParseYoloV5(
 {
     if (NUM_CLASSES_YOLO != detectionParams.numClassesConfigured)
     {
+<<<<<<< HEAD
         std::cerr << "WARNING: yolov5_Num classes mismatch. Configured:"
+=======
+        std::cerr << "WARNING: Num classes mismatch. Configured:"
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
                   << detectionParams.numClassesConfigured
                   << ", detected by network: " << NUM_CLASSES_YOLO << std::endl;
     }
@@ -179,7 +187,11 @@ static bool NvDsInferParseYoloV4(
 {
     if (NUM_CLASSES_YOLO != detectionParams.numClassesConfigured)
     {
+<<<<<<< HEAD
         std::cerr << "WARNING: yolov4_Num classes mismatch. Configured:"
+=======
+        std::cerr << "WARNING: Num classes mismatch. Configured:"
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
                   << detectionParams.numClassesConfigured
                   << ", detected by network: " << NUM_CLASSES_YOLO << std::endl;
     }
@@ -387,7 +399,11 @@ static bool NvDsInferParseYoloV3(
 
     if (NUM_CLASSES_YOLO != detectionParams.numClassesConfigured)
     {
+<<<<<<< HEAD
         std::cerr << "WARNING: yolov3_Num classes mismatch. Configured:"
+=======
+        std::cerr << "WARNING: Num classes mismatch. Configured:"
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
                   << detectionParams.numClassesConfigured
                   << ", detected by network: " << NUM_CLASSES_YOLO << std::endl;
     }
@@ -434,7 +450,11 @@ static bool NvDsInferParseYoloV2(
 
     if (NUM_CLASSES_YOLO != detectionParams.numClassesConfigured)
     {
+<<<<<<< HEAD
         std::cerr << "WARNING: yolov2_Num classes mismatch. Configured:"
+=======
+        std::cerr << "WARNING: Num classes mismatch. Configured:"
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
                   << detectionParams.numClassesConfigured
                   << ", detected by network: " << NUM_CLASSES_YOLO << std::endl;
     }

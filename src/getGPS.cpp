@@ -1,10 +1,19 @@
 #include "getGPS.h"
 #include <sstream>
 #include <iomanip>
+<<<<<<< HEAD
 #include <mutex>
 // #include "deepstream_test.h"
 
 getGPS GG;
+=======
+
+getGPS::getGPS(){}
+getGPS::~getGPS(){}
+// getGPS GG;  //实例化 获取当前GPS
+
+
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
 
 int getGPS::gpsOpen()
 {
@@ -50,6 +59,7 @@ int getGPS::gpsOpen()
 
 }
 
+<<<<<<< HEAD
 // std::vector <std::string> getGPS::getGPSData(int serial_fd,const Callback& callback)
 void getGPS::getGPSData(int serial_fd,const Callback& callback)
 {
@@ -59,6 +69,16 @@ void getGPS::getGPSData(int serial_fd,const Callback& callback)
 
     while(true)
     {      
+=======
+std::vector <std::string> getGPS::getGPSData(int serial_fd,const Callback& callback)
+{
+    getGPS GG;
+    std::vector <std::string>result;
+    char buffer[256];
+    std::string gps_data;
+    while(true)
+    {
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
         int bytes_read = read(serial_fd, buffer, sizeof(buffer));  // 从串口读取数据
         
         if (bytes_read > 0) 
@@ -137,7 +157,11 @@ void getGPS::getGPSData(int serial_fd,const Callback& callback)
                 
                 gps_data = gps_data.substr(pos + 1);
             }
+<<<<<<< HEAD
             
+=======
+         
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
             result.clear();
             result.push_back(GG.utctime);
             result.push_back(std::to_string(GG.lat) + GG.ulat);
@@ -149,6 +173,7 @@ void getGPS::getGPSData(int serial_fd,const Callback& callback)
             result.push_back(GG.sog + "Kn");
             result.push_back(GG.kph+"km/h");
 
+<<<<<<< HEAD
             // GG.gpsData = result;
             
         }       
@@ -156,6 +181,17 @@ void getGPS::getGPSData(int serial_fd,const Callback& callback)
     }
 }
 
+=======
+            callback(result);
+            // if(executed)
+            // break;
+
+            // return result;
+        }
+    }
+
+}
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
 
 //回调函数，用以在getGPSData中实时得到最后的result
 std::vector<std::string> handleGPSData(const std::vector<std::string>&data) 

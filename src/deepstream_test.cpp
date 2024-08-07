@@ -5,6 +5,7 @@
 #include <glib.h>
 #include <string>
 #include <ctime>
+<<<<<<< HEAD
 // #include "messageGenerate.h"
 #include "tcp_ip_message.h"
 #include "getGPS.h"
@@ -19,6 +20,20 @@
 // messageGenerate::messageGenerate(){}
 // messageGenerate::~messageGenerate(){}
 // messageGenerate MG; //实例化 生成报文类
+=======
+#include "messageGenerate.h"
+
+#define MAX_DISPLAY_LEN 64
+
+// #define PGIE_CLASS_ID_VEHICLE 0
+// #define PGIE_CLASS_ID_PERSON 2
+#define LABEL_FILE "/home/nano/liujian/test_websocket/utils/labels_coco.txt"
+
+
+messageGenerate::messageGenerate(){}
+messageGenerate::~messageGenerate(){}
+messageGenerate MG; //实例化 生成报文类
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
 // #define LOCAL_VIDEO "/opt/nvidia/deepstream/deepstream-5.0/samples/streams/sample_720p.h264"
 
 
@@ -47,6 +62,7 @@
 #define CONFIG_GPU_ID "gpu-id"
 #define CONFIG_DISPLAY_TRACKING_ID "display-tracking-id"
 
+<<<<<<< HEAD
 // 需要显示的经纬度
 static std::string lat;
 static std::string lon;
@@ -89,12 +105,35 @@ static GstPadProbeReturn osd_sink_pad_buffer_probe (GstPad * pad, GstPadProbeInf
 
     NvDsObjectMeta *obj_meta = NULL;
 
+=======
+
+DeepStream::DeepStream(){}
+DeepStream::~DeepStream(){}
+DeepStream DS; //实例化DeepStream类，必须在函数之外实例化，不然每次进函数会重新实例化，导致之前的数据清空
+
+// std::stringstream ss;
+// ss <<"rtmp://112.82.244.90:1935/live/vehicle_" <<MG.deviceNum;
+// const char* RTMP_SERVER_URL = ss.str().c_str();
+
+/* osd_sink_pad_buffer_probe  will extract metadata received on OSD sink pad
+ * and update params for drawing rectangle, object information etc. */
+
+static GstPadProbeReturn
+osd_sink_pad_buffer_probe (GstPad * pad, GstPadProbeInfo * info,
+    gpointer u_data)
+{
+    GstBuffer *buf = (GstBuffer *) info->data;
+
+    NvDsObjectMeta *obj_meta = NULL;
+ 
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
     NvDsMetaList * l_frame = NULL;
     NvDsMetaList * l_obj = NULL;
     NvDsDisplayMeta *display_meta = NULL;
 
     //获取批处理元数据
     NvDsBatchMeta *batch_meta = gst_buffer_get_nvds_batch_meta (buf);
+<<<<<<< HEAD
 
     // std::cout<<"lat的值为"<<lat<<std::endl;
     // std::cout<<"lon的值为"<<lon<<std::endl;
@@ -102,12 +141,19 @@ static GstPadProbeReturn osd_sink_pad_buffer_probe (GstPad * pad, GstPadProbeInf
     //遍历批处理元数据，得到每一帧的元数据
     for (l_frame = batch_meta->frame_meta_list; l_frame != NULL; l_frame = l_frame->next)
     {
+=======
+    
+    //遍历批处理元数据，得到每一帧的元数据
+    for (l_frame = batch_meta->frame_meta_list; l_frame != NULL; l_frame = l_frame->next)
+     {
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
         //获取每一帧的元数据
         NvDsFrameMeta *frame_meta = (NvDsFrameMeta *) (l_frame->data);
         int offset = 0;
 
         //遍历每一帧的元数据，得到每一个检测到的物体的元数据
         for (l_obj = frame_meta->obj_meta_list; l_obj != NULL;l_obj = l_obj->next) 
+<<<<<<< HEAD
         {
           obj_meta = (NvDsObjectMeta *) (l_obj->data);
           
@@ -361,11 +407,86 @@ static GstPadProbeReturn osd_sink_pad_buffer_probe (GstPad * pad, GstPadProbeInf
         }
    
 
+=======
+          {
+            obj_meta = (NvDsObjectMeta *) (l_obj->data);
+            
+            if (obj_meta->class_id == 0) 
+            {
+                // 如果object id不在g_person_ids中，添加进去
+                if (std::find(DS.g_person_ids.begin(), DS.g_person_ids.end(), obj_meta->object_id) == DS.g_person_ids.end())
+                {                                
+                  DS.g_person_ids.push_back(obj_meta->object_id);
+                }
+              
+                obj_meta->text_params.font_params.font_size=15;
+                obj_meta->text_params.font_params.font_color.red=0;
+                obj_meta->text_params.font_params.font_color.green = 255;
+                obj_meta->text_params.font_params.font_color.blue = 0;
+                obj_meta->text_params.font_params.font_color.alpha = 1.0;
+
+                /* 将uint64位的ID变为整型，但在tracker_config.yml更改useUniqueID为0后就不必手动更改了*/              
+                // if(DS.id_to_number_map_person.find(obj_meta->object_id) == DS.id_to_number_map_person.end())
+                // //若目标ID不在映射表中，分配一个新的数字显示
+                // {  
+                //   int display_number = DS.id_to_number_map_person.size();
+                //   DS.id_to_number_map_person.insert({obj_meta->object_id,display_number});
+                // }
+
+                // // 获取分配给目标ID的数字显示
+                // int display_number = DS.id_to_number_map_person[obj_meta->object_id]; 
+
+                // std::string id_str = "-ID:"+std::to_string(display_number);
+                // std::string show_person = obj_meta->obj_label  +id_str;
+                
+                // char* charArray = new char[show_person.size()];
+                // strcpy(charArray, show_person.c_str());
+                // obj_meta->text_params.display_text = charArray;               
+                
+            }
+            if (obj_meta->class_id == 56) 
+            {
+              // 如果object id不在g_chair_ids中，添加进去
+                if (std::find(DS.g_chair_ids.begin(), DS.g_chair_ids.end(), obj_meta->object_id) == DS.g_chair_ids.end())
+                {
+                  DS.g_chair_ids.push_back(obj_meta->object_id);                      
+                }
+
+                obj_meta->text_params.font_params.font_size=15;
+                obj_meta->text_params.font_params.font_color.red=255;
+                obj_meta->text_params.font_params.font_color.green = 255;
+                obj_meta->text_params.font_params.font_color.blue = 0;
+                obj_meta->text_params.font_params.font_color.alpha = 1.0;
+
+                // if(DS.id_to_number_map_chair.find(obj_meta->object_id) == DS.id_to_number_map_chair.end())
+                //   //若目标ID不在映射表中，分配一个新的数字显示
+                //   {
+                //     int display_number = DS.id_to_number_map_chair.size();
+     
+                //     DS.id_to_number_map_chair.insert({obj_meta->object_id,display_number});
+                //   }
+
+                // // 获取分配给目标ID的数字显示
+                // int display_number = DS.id_to_number_map_chair[obj_meta->object_id];
+                // // obj_meta->object_id = display_number;
+
+                // std::string id_str = "-ID:"+std::to_string(display_number);
+                // std::string show_chair = obj_meta->obj_label + id_str;
+                
+                // char* charArray = new char[show_chair.size()];
+                // strcpy(charArray, show_chair.c_str());
+                // obj_meta->text_params.display_text = charArray;
+               
+            }
+          }
+        
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
         //获取显示元数据
         display_meta = nvds_acquire_display_meta_from_pool(batch_meta);
         
         //添加识别对象的显示文字
         NvOSD_TextParams *txt_params  = &display_meta->text_params[0];
+<<<<<<< HEAD
         display_meta->num_labels = 4; //显示多少段文字就要改成多少
         txt_params->display_text = (char*)g_malloc0 (MAX_DISPLAY_LEN);
         offset = snprintf(txt_params->display_text, MAX_DISPLAY_LEN, "横向裂缝:%d  ", DeepStream::g_Transverse_cracks_ids.size());
@@ -377,6 +498,13 @@ static GstPadProbeReturn osd_sink_pad_buffer_probe (GstPad * pad, GstPadProbeInf
         offset += snprintf(txt_params->display_text+offset, MAX_DISPLAY_LEN-offset, "错台:%d  ", DeepStream::g_faulting_ids.size());
         offset += snprintf(txt_params->display_text+offset, MAX_DISPLAY_LEN-offset, "破碎板:%d  ", DeepStream::g_crushing_plate_ids.size());
 
+=======
+        display_meta->num_labels = 3; //显示多少段文字就要改成多少
+        txt_params->display_text = (char*)g_malloc0 (MAX_DISPLAY_LEN);
+        offset = snprintf(txt_params->display_text, MAX_DISPLAY_LEN, "Person = %d ", DS.g_person_ids.size());
+        offset = snprintf(txt_params->display_text+offset, MAX_DISPLAY_LEN, "Chair = %d ", DS.g_chair_ids.size());
+        
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
         // 添加时间显示文字
         NvOSD_TextParams *txt_time  = &display_meta->text_params[1];
         txt_time->display_text = (char*)g_malloc0(MAX_DISPLAY_LEN);
@@ -399,6 +527,7 @@ static GstPadProbeReturn osd_sink_pad_buffer_probe (GstPad * pad, GstPadProbeInf
         std::string carNum_display = "苏DDP2058";
         snprintf(txt_carNum->display_text,MAX_DISPLAY_LEN,carNum_display.c_str());
 
+<<<<<<< HEAD
         // 添加经纬度显示文字
         NvOSD_TextParams *txt_location = &display_meta->text_params[3];
         txt_location->display_text = (char*)g_malloc0(MAX_DISPLAY_LEN);
@@ -406,6 +535,8 @@ static GstPadProbeReturn osd_sink_pad_buffer_probe (GstPad * pad, GstPadProbeInf
         std::string location_display =lat+" "+lon;
         snprintf(txt_location->display_text,MAX_DISPLAY_LEN,location_display.c_str());
 
+=======
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
         /* 设置识别对象文字的位置 */
         txt_params->x_offset = 10;
         txt_params->y_offset = 52;
@@ -418,12 +549,17 @@ static GstPadProbeReturn osd_sink_pad_buffer_probe (GstPad * pad, GstPadProbeInf
         txt_carNum->x_offset = 10;
         txt_carNum->y_offset = 92;
 
+<<<<<<< HEAD
         /* 设置经纬度显示文字的位置 */
         txt_location->x_offset = 10;
         txt_location->y_offset = 132;
 
         /* 识别对象文字的字体 , 字体颜色 和 字体尺寸 */
         txt_params->font_params.font_name = "SimSun";
+=======
+        /* 识别对象文字的字体 , 字体颜色 和 字体尺寸 */
+        txt_params->font_params.font_name = "Serif";
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
         txt_params->font_params.font_size = 15;
         txt_params->font_params.font_color.red = 1.0;
         txt_params->font_params.font_color.green = 1.0;
@@ -446,6 +582,7 @@ static GstPadProbeReturn osd_sink_pad_buffer_probe (GstPad * pad, GstPadProbeInf
         txt_carNum->font_params.font_color.blue = 1.0;
         txt_carNum->font_params.font_color.alpha = 1.0;
 
+<<<<<<< HEAD
         /* 经纬度显示文字的字体 , 字体颜色 和 字体尺寸 */
         txt_location->font_params.font_name = "SimSun"; //SimSun字体支持显示中文
         txt_location->font_params.font_size = 15;
@@ -455,6 +592,8 @@ static GstPadProbeReturn osd_sink_pad_buffer_probe (GstPad * pad, GstPadProbeInf
         txt_location->font_params.font_color.alpha = 1.0;
 
 
+=======
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
         /* 识别对象文字的背景颜色 */
         txt_params->set_bg_clr = 1;
         txt_params->text_bg_clr.red = 0.0;
@@ -476,6 +615,7 @@ static GstPadProbeReturn osd_sink_pad_buffer_probe (GstPad * pad, GstPadProbeInf
         txt_carNum->text_bg_clr.blue = 0.0;
         txt_carNum->text_bg_clr.alpha = 1.0;
 
+<<<<<<< HEAD
         /*经纬度显示文字的背景颜色 */
         txt_location->set_bg_clr = 1;
         txt_location->text_bg_clr.red = 0.0;
@@ -487,6 +627,10 @@ static GstPadProbeReturn osd_sink_pad_buffer_probe (GstPad * pad, GstPadProbeInf
         nvds_add_display_meta_to_frame(frame_meta, display_meta);
 
         
+=======
+        //添加显示
+        nvds_add_display_meta_to_frame(frame_meta, display_meta);
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
     }
 
     // g_print ("Frame Number = %d Number of objects = %d "
@@ -496,6 +640,10 @@ static GstPadProbeReturn osd_sink_pad_buffer_probe (GstPad * pad, GstPadProbeInf
     return GST_PAD_PROBE_OK;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
 static gboolean
 bus_call (GstBus * bus, GstMessage * msg, gpointer data)
 {
@@ -532,13 +680,19 @@ if (error)                                                               \
     goto done;                                                           \
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
 //获取文件的绝对路径
 static gchar *
 get_absolute_file_path(gchar *cfg_file_path, gchar *file_path)
 {
+<<<<<<< HEAD
    
+=======
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
     gchar abs_cfg_path[PATH_MAX + 1];
     gchar *abs_file_path;
     gchar *delim;
@@ -567,7 +721,10 @@ get_absolute_file_path(gchar *cfg_file_path, gchar *file_path)
     abs_file_path = g_strconcat(abs_cfg_path, file_path, NULL);
     g_free(file_path);
 
+<<<<<<< HEAD
     std::cout<<"绝对路径为"<<abs_file_path<<std::endl;
+=======
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
     return abs_file_path;
 }
 
@@ -693,11 +850,18 @@ done:
 
 int DeepStream::deepstream_func()
 {
+<<<<<<< HEAD
 
   std::stringstream ss;
   messageGenerate MG;
   ss <<"rtmp://112.82.244.90:1935/live/vehicle_" <<MG.deviceNum;
   std::string RTMP_SERVER_URL = ss.str();
+=======
+  std::stringstream ss;
+  ss <<"rtmp://112.82.244.90:1935/live/vehicle_" <<MG.deviceNum;
+  std::string RTMP_SERVER_URL = ss.str();
+  std::cout<<"rtmp为"<<RTMP_SERVER_URL<<std::endl;
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
 
   GMainLoop *loop = NULL;
   GstElement *pipeline = NULL, *source = NULL, *h264parser = NULL,
@@ -902,12 +1066,18 @@ int DeepStream::deepstream_func()
   if (!osd_sink_pad)
       g_print("Unable to get sink pad\n");
   else
+<<<<<<< HEAD
   {
     // 参数：pad, 探针类型, 探针回调函数, 回调函数的参数, 回调函数的参数释放函数
     gst_pad_add_probe(osd_sink_pad, GST_PAD_PROBE_TYPE_BUFFER, osd_sink_pad_buffer_probe, NULL, NULL); // 添加探针
   // g_timeout_add(5000, perf_print_callback, &g_perf_data);      
   }
                                                 // 添加定时器，用于打印性能数据
+=======
+      // 参数：pad, 探针类型, 探针回调函数, 回调函数的参数, 回调函数的参数释放函数
+      gst_pad_add_probe(osd_sink_pad, GST_PAD_PROBE_TYPE_BUFFER, osd_sink_pad_buffer_probe, NULL, NULL); // 添加探针
+  // g_timeout_add(5000, perf_print_callback, &g_perf_data);                                                // 添加定时器，用于打印性能数据
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
   gst_object_unref(osd_sink_pad);
 
   //add a message handler 

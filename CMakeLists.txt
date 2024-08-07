@@ -75,12 +75,17 @@ set(SRCFILES customparser_yolov5/nvdsinfer_yolo_engine.cpp
             #  customparser_yolov5/yoloPlugins.cpp
 )
 
+<<<<<<< HEAD
 set(TARGET_LIB libnvdsinfer_custom_impl_Yolo_damage19)  #需要生成libnvdsinfer_custom_impl_Yolo.so库
+=======
+set(TARGET_LIB libnvdsinfer_custom_impl_Yolo_coco)  #需要生成libnvdsinfer_custom_impl_Yolo.so库
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
 
 add_library(${TARGET_LIB} SHARED ${SRCFILES}) #生成TARGET_LIB动态库(即libnvdsinfer_custom_impl_Yolo.so)，由SRCFILES生成,生成的库在build里
 
 # SET(CMAKE_BUILD_TYPE Debug)
 
+<<<<<<< HEAD
 # add_executable(target  main.cpp
 # 					   src/deepstream_test.cpp
 # 					#   src/getGPS.cpp
@@ -129,3 +134,37 @@ target_link_libraries(tcp_ip_message
 				)
 
 link_directories(${PROJECT_SOURCE_DIR}/utils)
+=======
+
+# 添加可执行程序
+add_executable(tcp_ip_message src/tcp_ip_message.cpp
+							  src/messageGenerate.cpp
+							  src/getGPS.cpp)
+target_link_libraries(tcp_ip_message -pthread
+									 -lserial)	
+
+# add_executable(gps src/getGPS.cpp)
+# target_link_libraries(gps -lserial
+# 						  -lpthread)
+
+add_executable(target main.cpp
+				src/deepstream_test.cpp
+				# src/Trtyolosort.cpp 				
+					)
+
+# 将库文件链接到可执行程序target上
+target_link_libraries(target  ${OpenCV_LIBS}
+							  pthread 
+							  ${GST_LIBRARIES}
+							  -lavutil -lswresample -lavcodec -lavformat
+							  ${TARGET_LIB}
+							  nvinfer_plugin
+							  nvinfer
+							  nvparsers
+							  nvdsgst_meta
+							  nvds_meta
+							  ${CUDA_LIBRARIES}
+							#   cudart
+							  cublas
+							  stdc++fs)
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4

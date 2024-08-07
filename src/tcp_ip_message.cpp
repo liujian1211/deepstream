@@ -5,8 +5,13 @@
 #include <arpa/inet.h>
 #include <sstream>
 #include <iomanip>
+<<<<<<< HEAD
 #include "getGPS.h"
 #include "deepstream_test.h"
+=======
+#include "messageGenerate.h"
+#include "getGPS.h"
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
 
 // #define SERVER_IP "10.0.1.34"   //定义服务器IP
 // #define SERVER_PORT 8080     //定义服务器端口
@@ -17,6 +22,7 @@
 #define BUFFER_SIZE 1024     //设置接收报文类型函数的报文的长度
 #define BUFFER_SIZE_HEARTBEAT 1024 //设置接收心跳报文的长度
 
+<<<<<<< HEAD
 messageGenerate MG; //实例化 生成报文类
 messageGenerateHeartbeat MGheartbeat; //实例化 生成心跳报文类
 messageGenerateLocation MGlocation; //实例化 生成定位报文类
@@ -25,16 +31,66 @@ messageGenerateVideoOpen MGvideoopen; //实例化 生成视频打开报文类
 messageGenerateVideoClose MGvideoclose; //实例化 生成视频关闭报文类
 messageGenerateRealtimeVideo MGrealtimevideo; //实例化 生成实时视频心跳报文类
 
+=======
+messageGenerate::messageGenerate(){}
+messageGenerate::~messageGenerate(){}
+messageGenerate MG; //实例化 生成报文类
+
+messageGenerateHeartbeat::messageGenerateHeartbeat(){}
+messageGenerateHeartbeat::~messageGenerateHeartbeat(){}
+messageGenerateHeartbeat MGheartbeat; //实例化 生成心跳报文类
+
+messageGenerateLocation::messageGenerateLocation(){}
+messageGenerateLocation::~messageGenerateLocation(){}
+messageGenerateLocation MGlocation; //实例化 生成定位报文类
+
+messageGenerateRegister::messageGenerateRegister(){}
+messageGenerateRegister::~messageGenerateRegister(){}
+messageGenerateRegister MGregister; //实例化 生成注册报文类
+
+messageGenerateVideoOpen::messageGenerateVideoOpen(){}
+messageGenerateVideoOpen::~messageGenerateVideoOpen(){}
+messageGenerateVideoOpen MGvideoopen; //实例化 生成视频打开报文类
+
+messageGenerateVideoClose::messageGenerateVideoClose(){}
+messageGenerateVideoClose::~messageGenerateVideoClose(){}
+messageGenerateVideoClose MGvideoclose; //实例化 生成视频关闭报文类
+
+messageGenerateRealtimeVideo::messageGenerateRealtimeVideo(){}
+messageGenerateRealtimeVideo::~messageGenerateRealtimeVideo(){}
+messageGenerateRealtimeVideo MGrealtimevideo; //实例化 生成实时视频心跳报文类
+
+// getGPS::getGPS(){}
+// getGPS::~getGPS(){}
+getGPS GG;  //实例化 获取当前GPS
+
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
 /**
  * 执行cmd命令行，使用分离线程
 */
 void executeCommand()
 {   
+<<<<<<< HEAD
     // system("sh /home/nano/startup.sh");
     DeepStream::deepstream_func();
 }
 
 /**
+=======
+    system("sh /home/nano/startup.sh");
+}
+
+/**
+ * 终止上面的cmd命令，也使用分离线程
+*/
+// void terminateCommand()
+// {
+//     // 终止指定进程
+//     system("pkill -f /home/nano/startup.sh"); 
+// }
+
+/**
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
  * 判断接收的报文类型：心跳、定位、视频打开、视频关闭、实时视频
 */
 int MessageType(int sockfd)
@@ -239,6 +295,11 @@ int MessageType(int sockfd)
                     else
                     {                      
                         std::cout<<"发送视频关闭回复报文成功"<<std::endl;
+<<<<<<< HEAD
+=======
+                        // std::thread t(terminateCommand);
+                        // t.detach();
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
                         
                         MGvideoclose.serialNum++;
                         break;
@@ -249,6 +310,7 @@ int MessageType(int sockfd)
                 case 9001: //实时视频请求 服务-设备
                     std::cout<<"接收到实时视频回复心跳"<<std::endl;
                     
+<<<<<<< HEAD
                     if (send(sockfd, message_realtimevideo_hex.c_str(), message_realtimevideo_hex.length(), 0) == -1)
                     {
                         std::cerr << "发送实时视频回复报文失败" << std::endl;
@@ -262,6 +324,27 @@ int MessageType(int sockfd)
                     }
                                 
                
+=======
+                    // while(true)
+                    // {
+                        // if((time(NULL)%120)==0) //每隔120s发送
+                        // {
+                            if (send(sockfd, message_realtimevideo_hex.c_str(), message_realtimevideo_hex.length(), 0) == -1)
+                            {
+                                std::cerr << "发送实时视频回复报文失败" << std::endl;
+                                break;
+                            } 
+                            else
+                            {
+                                std::cout<<"发送实时视频回复报文成功"<<std::endl;
+                                MGrealtimevideo.serialNum++;
+                                break;
+                            }
+                                
+                        // }
+                        
+                    // }                 
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
             }
   
         }
@@ -278,7 +361,10 @@ int MessageType(int sockfd)
 */
 void sendHeartbeat(int sockfd) 
 {  
+<<<<<<< HEAD
     // setenv("LD_PRELOAD", "/home/nano/liujian/test_websocket/utils/libmyplugins.so", 1); //设置环境变量
+=======
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
     //将int类型的length转为16进制
     std::stringstream ssLength;
     ssLength << std::setw(8) << std::setfill('0') << std::hex << MGheartbeat.length;
@@ -337,18 +423,26 @@ void sendHeartbeat(int sockfd)
     }
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
 /**
  * 发送定位报文
 */
 void sendLocation(int sockfd) 
 {
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
     //将int类型的length转为16进制，length是固定不变的
     std::stringstream ssLength;
     ssLength << std::setw(8) << std::setfill('0') << std::hex << MGlocation.length;  
     ssLength.str();
 
+<<<<<<< HEAD
     getGPS GG;  //实例化 获取当前GPS
     // DeepStream DS;
     
@@ -357,14 +451,22 @@ void sendLocation(int sockfd)
 
     // DeepStream::data("data1","data2");
  
+=======
+    // 打开GPS，打开一次就可以
+    int serial_port = GG.gpsOpen();
+    
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
     time_t lastOutputTime = time(NULL); // 记录上一次输出的时间戳
     GG.getGPSData(serial_port,[&sockfd, &ssLength,&lastOutputTime](std::vector<std::string>result)
     {
         if(std::stof(result[1]) && std::stof(result[2]))    //当获取到经纬度的时候
         {          
+<<<<<<< HEAD
             
             DeepStream::data(result[1],result[2]);
 
+=======
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
             time_t currentTime = time(NULL);  //获取当前时间戳
             // if((time(NULL)%20)==0)  //每隔20s更新一次
             if(currentTime - lastOutputTime >=20)
@@ -376,7 +478,11 @@ void sendLocation(int sockfd)
                 // std::cout<<"真北朝向为"<<result[5]<<",16进制表示为"<<std::setw(8) << std::setfill('0') << std::hex <<MGlocation.Str2Hex(result[5])<<std::endl;  
                 // std::cout<<"速度为"<<result[8]<<",16进制表示为"<<std::setw(8) << std::setfill('0') << std::hex <<MGlocation.Str2Hex(result[2])<<std::endl;
                 // std::cout<<std::endl;
+<<<<<<< HEAD
         
+=======
+            
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
                 //将int类型的serialNum转为16进制
                 std::stringstream ssSerialNum;
                 ssSerialNum <<std::setw(8) << std::setfill('0')<<std::hex <<MGlocation.serialNum;
@@ -457,7 +563,11 @@ void sendLocation(int sockfd)
 
 }
 
+<<<<<<< HEAD
 int tcpIpMessage::message()
+=======
+int message()
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
 {
     // 创建socket
     int sockfd = socket(AF_INET,SOCK_STREAM,0);
@@ -568,7 +678,10 @@ int tcpIpMessage::message()
 
                 // 起定位报文发送线程
                 std::thread sendLocationThread(sendLocation,sockfd);
+<<<<<<< HEAD
                 // sendLocationThread.detach();
+=======
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
 
                 // 起接收报文线程
                 std::thread recvMsgThread(MessageType,sockfd);
@@ -600,6 +713,10 @@ int tcpIpMessage::message()
 
 int main()
 {
+<<<<<<< HEAD
     tcpIpMessage TIM;  //实例化 TIM
     TIM.message();
+=======
+    message();
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
 }

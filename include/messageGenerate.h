@@ -19,8 +19,13 @@ class messageGenerate
         
         
     public:
+<<<<<<< HEAD
         // messageGenerate();
         // ~messageGenerate();
+=======
+        messageGenerate();
+        ~messageGenerate();
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
         std::string header = "5B";
         std::string footer = "5D";
         std::string deviceNum = "018761869337";  //设备编号，以后初始化用，现在现写死
@@ -45,8 +50,13 @@ class messageGenerateHeartbeat:public messageGenerate
         std::string encryption = "00" ; //是否加密
         std::string secretKey = "00000000"; //密钥
         
+<<<<<<< HEAD
         // messageGenerateHeartbeat();
         // ~messageGenerateHeartbeat();
+=======
+        messageGenerateHeartbeat();
+        ~messageGenerateHeartbeat();
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
 };
 
 /**
@@ -66,8 +76,13 @@ class messageGenerateRegister:public messageGenerate
         std::string carNum = "CBD544363031444400000000000000000000000000"; //16进制的车牌号
         std::string carColor = "01";
 
+<<<<<<< HEAD
         // messageGenerateRegister();
         // ~messageGenerateRegister();
+=======
+        messageGenerateRegister();
+        ~messageGenerateRegister();
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
 };
 
 /**
@@ -92,8 +107,13 @@ class messageGenerateLocation:public messageGenerate
         int direction = 0x000F; //方向
         int altitude = 0x0020;  //海拔
 
+<<<<<<< HEAD
         // messageGenerateLocation();
         // ~messageGenerateLocation();
+=======
+        messageGenerateLocation();
+        ~messageGenerateLocation();
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
         std::string getCurrentTime();
         int Str2Hex(std::string Str);
       
@@ -115,8 +135,13 @@ class messageGenerateVideoOpen:public messageGenerate
         std::string secretKey = "00000000"; //密钥
         std::string success = "00";
 
+<<<<<<< HEAD
         // messageGenerateVideoOpen();
         // ~messageGenerateVideoOpen();
+=======
+        messageGenerateVideoOpen();
+        ~messageGenerateVideoOpen();
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
 };
 
 /**
@@ -135,8 +160,13 @@ class messageGenerateVideoClose:public messageGenerate
         std::string secretKey = "00000000"; //密钥
         std::string success = "00";
 
+<<<<<<< HEAD
         // messageGenerateVideoClose();
         // ~messageGenerateVideoClose();
+=======
+        messageGenerateVideoClose();
+        ~messageGenerateVideoClose();
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
 };
 
 /**
@@ -154,6 +184,11 @@ class messageGenerateRealtimeVideo:public messageGenerate
         std::string encryption = "00"; //是否加密
         std::string secretKey = "00000000"; //密钥
 
+<<<<<<< HEAD
         // messageGenerateRealtimeVideo();
         // ~messageGenerateRealtimeVideo();
+=======
+        messageGenerateRealtimeVideo();
+        ~messageGenerateRealtimeVideo();
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
 };

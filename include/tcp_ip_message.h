@@ -3,6 +3,7 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 #include <thread>
+<<<<<<< HEAD
 #include <vector>
 #include <mutex>
 #include <queue>
@@ -23,3 +24,16 @@ class tcpIpMessage
         int message();
         
 };
+=======
+
+int message();
+
+void sendHeartbeat(int sockfd);
+
+void sendLocation(int sockfd);
+
+int MessageType(int sockfd);
+
+void executeCommand(); //执行cmd命令 
+void terminateCommand(); //终止上述命令
+>>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
