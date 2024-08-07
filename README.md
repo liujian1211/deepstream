@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 1.数据传输流程
 
 DeepStream读取实时流或本地流→GStreamer插件将视频流转换为MPEG→rtmp将MPEG的视频流传输至web浏览器→Web浏览器中使用JavaScript和HTML5将MPEG格式的视频流解码并显示在网页上
@@ -24,8 +23,3 @@ DeepStream读取实时流或本地流→GStreamer插件将视频流转换为MPEG
 `LD_PRELOAD=/home/nano/liujian/test_websocket/utils/libmyplugins.so ./tcp_ip_message`
 
 上述修改就无需再生成target，而只需生成tcp_ip_message
-=======
-# Jetson-deepstream-rtmp
-
-jetson-deepstream
->>>>>>> 329743696f9a96baab72e2c31a85a6480e200af4
